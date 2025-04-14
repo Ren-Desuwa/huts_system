@@ -26,9 +26,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField1" min="-2" pref="146" max="-2" attributes="0"/>
+                          <Component id="Email" min="-2" pref="146" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" pref="142" max="-2" attributes="0"/>
-                          <Component id="jPasswordField1" alignment="0" min="-2" pref="146" max="-2" attributes="0"/>
+                          <Component id="Password" alignment="0" min="-2" pref="146" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -50,11 +50,11 @@
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="Email" min="-2" pref="38" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-              <Component id="jPasswordField1" min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="Password" min="-2" pref="38" max="-2" attributes="0"/>
               <EmptySpace pref="114" max="32767" attributes="0"/>
               <Component id="jButton1" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
@@ -96,11 +96,23 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
-    </Component>
-    <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+    <Component class="javax.swing.JTextField" name="Email">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter your Email"/>
+      </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField1ActionPerformed"/>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="EmailFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="EmailFocusLost"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="Password">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Password"/>
+      </Properties>
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="PasswordFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="PasswordFocusLost"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PasswordActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

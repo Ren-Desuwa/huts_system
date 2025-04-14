@@ -8,12 +8,12 @@ package view;
  *
  * @author TRECOOL
  */
-public class Login2 extends javax.swing.JPanel {
+public class Subscription extends javax.swing.JPanel {
 
     /**
-     * Creates new form Login2
+     * Creates new form Subscription
      */
-    public Login2() {
+    public Subscription() {
         initComponents();
     }
 
