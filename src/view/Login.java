@@ -4,17 +4,21 @@
  */
 package view;
 
+import controller.DataController;
 /**
  *
  * @author Ireneo III
  */
 public class Login extends javax.swing.JFrame {
 
+    private DataController database;
     /**
      * Creates new form Login
      */
-    public Login() {
+    public Login(DataController db) {
+        this.database = db;
         initComponents();
+        
     }
 
     /**
@@ -26,57 +30,186 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jpnl_Main_Login = new javax.swing.JPanel();
+        jlbl_Login = new javax.swing.JLabel();
+        jbtn_Login = new javax.swing.JButton();
+        jtf_Email = new javax.swing.JTextField();
+        jpf_Password = new javax.swing.JPasswordField();
+        jlbl_Password = new javax.swing.JLabel();
+        jlbl_Email = new javax.swing.JLabel();
+        jlbl__Forgot_Password = new javax.swing.JLabel();
+        jlbl_Sign_Up = new javax.swing.JLabel();
+        jpnl_Main_Sign_Up = new javax.swing.JPanel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.CardLayout());
+
+        jpnl_Main_Login.setBackground(new java.awt.Color(51, 0, 102));
+
+        jlbl_Login.setBackground(new java.awt.Color(255, 255, 255));
+        jlbl_Login.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jlbl_Login.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlbl_Login.setText("Log In");
+        jlbl_Login.setToolTipText("");
+
+        jbtn_Login.setBackground(new java.awt.Color(255, 0, 0));
+        jbtn_Login.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jbtn_Login.setForeground(new java.awt.Color(255, 255, 255));
+        jbtn_Login.setText("Log In");
+        jbtn_Login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_LoginActionPerformed(evt);
+            }
+        });
+
+        jtf_Email.setText("Enter your Email");
+        jtf_Email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jtf_EmailFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtf_EmailFocusLost(evt);
+            }
+        });
+        jtf_Email.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_EmailActionPerformed(evt);
+            }
+        });
+
+        jpf_Password.setText("Password");
+        jpf_Password.setEchoChar((char) 0);
+        jpf_Password.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jpf_PasswordFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jpf_PasswordFocusLost(evt);
+            }
+        });
+
+        jlbl_Password.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Password.setText("Password");
+
+        jlbl_Email.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Email.setText("Email");
+
+        jlbl__Forgot_Password.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl__Forgot_Password.setText("Forgot Password?");
+        jlbl__Forgot_Password.setToolTipText("");
+
+        jlbl_Sign_Up.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Sign_Up.setText("Sign  Up");
+        jlbl_Sign_Up.setToolTipText("");
+
+        javax.swing.GroupLayout jpnl_Main_LoginLayout = new javax.swing.GroupLayout(jpnl_Main_Login);
+        jpnl_Main_Login.setLayout(jpnl_Main_LoginLayout);
+        jpnl_Main_LoginLayout.setHorizontalGroup(
+            jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
+                .addGroup(jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addGroup(jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jbtn_Login)
+                            .addComponent(jtf_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbl_Sign_Up)
+                            .addComponent(jlbl__Forgot_Password)
+                            .addComponent(jlbl_Login)))
+                    .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addGroup(jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jlbl_Password, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbl_Email, javax.swing.GroupLayout.Alignment.LEADING))))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+        jpnl_Main_LoginLayout.setVerticalGroup(
+            jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jlbl_Login)
+                .addGap(20, 20, 20)
+                .addComponent(jlbl_Email)
+                .addGap(10, 10, 10)
+                .addComponent(jtf_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jlbl_Password)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jlbl__Forgot_Password)
+                .addGap(34, 34, 34)
+                .addComponent(jbtn_Login)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlbl_Sign_Up)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jpnl_Main_Login, "card3");
+
+        javax.swing.GroupLayout jpnl_Main_Sign_UpLayout = new javax.swing.GroupLayout(jpnl_Main_Sign_Up);
+        jpnl_Main_Sign_Up.setLayout(jpnl_Main_Sign_UpLayout);
+        jpnl_Main_Sign_UpLayout.setHorizontalGroup(
+            jpnl_Main_Sign_UpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jpnl_Main_Sign_UpLayout.setVerticalGroup(
+            jpnl_Main_Sign_UpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jpnl_Main_Sign_Up, "card2");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jbtn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_LoginActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
+    }//GEN-LAST:event_jbtn_LoginActionPerformed
+
+    private void jtf_EmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtf_EmailFocusGained
+        if ("Enter your Email".equals(jtf_Email.getText())) {
+            jtf_Email.setText("");
+        }
+    }//GEN-LAST:event_jtf_EmailFocusGained
+
+    private void jtf_EmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtf_EmailFocusLost
+        if ("".equals(jtf_Email.getText())) {
+            jtf_Email.setText("Enter your Email");
+        }
+    }//GEN-LAST:event_jtf_EmailFocusLost
+
+    private void jpf_PasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpf_PasswordFocusGained
+        if ("Password".equals(jpf_Password.getText())) {
+            jpf_Password.setEchoChar('\u2022');
+            jpf_Password.setText("");
+        }
+    }//GEN-LAST:event_jpf_PasswordFocusGained
+
+    private void jpf_PasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpf_PasswordFocusLost
+        if ("".equals(jpf_Password.getText())) {
+            jpf_Password.setEchoChar((char) 0);
+            jpf_Password.setText("Password");
+        }
+    }//GEN-LAST:event_jpf_PasswordFocusLost
+
+    private void jtf_EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_EmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_EmailActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jbtn_Login;
+    private javax.swing.JLabel jlbl_Email;
+    private javax.swing.JLabel jlbl_Login;
+    private javax.swing.JLabel jlbl_Password;
+    private javax.swing.JLabel jlbl_Sign_Up;
+    private javax.swing.JLabel jlbl__Forgot_Password;
+    private javax.swing.JPasswordField jpf_Password;
+    private javax.swing.JPanel jpnl_Main_Login;
+    private javax.swing.JPanel jpnl_Main_Sign_Up;
+    private javax.swing.JTextField jtf_Email;
     // End of variables declaration//GEN-END:variables
 }

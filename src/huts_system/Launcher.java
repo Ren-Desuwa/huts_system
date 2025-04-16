@@ -2,7 +2,7 @@ package huts_system;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import controller.DataController;
-import view.Electricity;
+import view.Login;
 import java.awt.EventQueue;
 import java.sql.SQLException;
 import tests.Tests;
@@ -18,7 +18,7 @@ public class Launcher {
         EventQueue.invokeLater(() -> {
             try {
                 DataController db = new DataController("asd");
-                Electricity login = new Electricity(db);
+                Login login = new Login(db);
                 login.setVisible(true);
                 System.out.println("Started");
             } catch (SQLException e) {
