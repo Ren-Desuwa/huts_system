@@ -14,28 +14,30 @@ public class Launcher {
      */
     public static void main(String[] args) {
         
-//        FlatDarkLaf.setup();
-//        EventQueue.invokeLater(() -> {
-//            try {
-//                DataController db = new DataController("asd");
-//                MainWindow main = new MainWindow(db);
-//                main.setVisible(true);
-//                System.out.println("Started");
-//            } catch (SQLException e) {
-//                System.out.println("crashed SQL");
-//            } catch (Exception e) {
-//                System.out.println("crashed");
-//            } 
-//        });
-        Tests test = new Tests();
-        test.runAll();
-        if (test.getStatus()) {
-            System.out.println("Tests Passed");
-            test.printSuccesses();
-        } else {
-            System.out.println("Tests Failed");
-            test.printErrors();
-        }
+        FlatDarkLaf.setup();
+        EventQueue.invokeLater(() -> {
+            try {
+                DataController db = new DataController("asd");
+                MainWindow main = new MainWindow(db);
+                main.setVisible(true);
+                System.out.println("Started");
+            } catch (SQLException e) {
+                System.out.println("crashed SQL");
+            } catch (Exception e) {
+                System.out.println("crashed");
+            } 
+        });
+        
+        
+//        Tests test = new Tests();
+//        test.runAll();
+//        if (test.getStatus()) {
+//            System.out.println("Tests Passed");
+//            test.printSuccesses();
+//        } else {
+//            System.out.println("Tests Failed");
+//            test.printErrors();
+//        }
     }
     
 }
