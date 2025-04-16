@@ -10,15 +10,16 @@ import controller.DataController;
  * @author Ireneo III
  */
 public class Login extends javax.swing.JFrame {
-
+    
+    
+    
     private DataController database;
     /**
      * Creates new form Login
      */
     public Login(DataController db) {
         this.database = db;
-        initComponents();
-        
+        initComponents();      
     }
 
     /**
@@ -33,119 +34,129 @@ public class Login extends javax.swing.JFrame {
         jpnl_Main_Login = new javax.swing.JPanel();
         jlbl_Login = new javax.swing.JLabel();
         jbtn_Login = new javax.swing.JButton();
-        jtf_Email = new javax.swing.JTextField();
-        jpf_Password = new javax.swing.JPasswordField();
+        Email = new javax.swing.JTextField();
+        Password = new javax.swing.JPasswordField();
         jlbl_Password = new javax.swing.JLabel();
         jlbl_Email = new javax.swing.JLabel();
         jlbl__Forgot_Password = new javax.swing.JLabel();
         jlbl_Sign_Up = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
         jpnl_Main_Sign_Up = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
         jpnl_Main_Login.setBackground(new java.awt.Color(51, 0, 102));
+        jpnl_Main_Login.setMinimumSize(new java.awt.Dimension(700, 410));
+        jpnl_Main_Login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlbl_Login.setBackground(new java.awt.Color(255, 255, 255));
-        jlbl_Login.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jlbl_Login.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Login.setBackground(new java.awt.Color(0, 0, 0));
+        jlbl_Login.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jlbl_Login.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlbl_Login.setText("Log In");
         jlbl_Login.setToolTipText("");
+        jpnl_Main_Login.add(jlbl_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, -1));
 
-        jbtn_Login.setBackground(new java.awt.Color(255, 0, 0));
+        jbtn_Login.setBackground(new java.awt.Color(226, 149, 90));
         jbtn_Login.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jbtn_Login.setForeground(new java.awt.Color(255, 255, 255));
         jbtn_Login.setText("Log In");
+        jbtn_Login.setMaximumSize(new java.awt.Dimension(79, 43));
+        jbtn_Login.setMinimumSize(new java.awt.Dimension(79, 43));
+        jbtn_Login.setPreferredSize(new java.awt.Dimension(79, 43));
         jbtn_Login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtn_LoginActionPerformed(evt);
             }
         });
+        jpnl_Main_Login.add(jbtn_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, -1, -1));
 
-        jtf_Email.setText("Enter your Email");
-        jtf_Email.addFocusListener(new java.awt.event.FocusAdapter() {
+        Email.setBackground(new java.awt.Color(51, 0, 102));
+        Email.setForeground(new java.awt.Color(23, 22, 22));
+        Email.setText("Enter your Email");
+        Email.setBackground(new java.awt.Color(0,0,0,1));
+        Email.setBorder(null);
+        Email.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        Email.setSelectedTextColor(new java.awt.Color(0, 0, 0));
+        Email.setSelectionColor(new java.awt.Color(0, 0, 0));
+        Email.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jtf_EmailFocusGained(evt);
+                EmailFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                jtf_EmailFocusLost(evt);
+                EmailFocusLost(evt);
             }
         });
-        jtf_Email.addActionListener(new java.awt.event.ActionListener() {
+        Email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_EmailActionPerformed(evt);
+                EmailActionPerformed(evt);
             }
         });
+        jpnl_Main_Login.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 120, -1));
 
-        jpf_Password.setText("Password");
-        jpf_Password.setEchoChar((char) 0);
-        jpf_Password.addFocusListener(new java.awt.event.FocusAdapter() {
+        Password.setBackground(new java.awt.Color(51, 0, 102));
+        Password.setBackground(new java.awt.Color(0,0,0,1));
+        Password.setText("Password");
+        Password.setForeground(new java.awt.Color(23, 22, 22));
+        Password.setBorder(null);
+        Password.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        Password.setEchoChar((char) 0);
+        Password.setSelectedTextColor(new java.awt.Color(0, 0, 0));
+        Password.setSelectionColor(new java.awt.Color(0, 0, 0));
+        Password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jpf_PasswordFocusGained(evt);
+                PasswordFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                jpf_PasswordFocusLost(evt);
+                PasswordFocusLost(evt);
             }
         });
+        Password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordActionPerformed(evt);
+            }
+        });
+        jpnl_Main_Login.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 120, -1));
 
-        jlbl_Password.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Password.setBackground(new java.awt.Color(0, 0, 0));
+        jlbl_Password.setForeground(new java.awt.Color(23, 22, 22));
+        jlbl_Password.setLabelFor(Password);
         jlbl_Password.setText("Password");
+        jpnl_Main_Login.add(jlbl_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
 
-        jlbl_Email.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Email.setBackground(new java.awt.Color(0, 0, 0));
+        jlbl_Email.setForeground(new java.awt.Color(23, 22, 22));
+        jlbl_Email.setLabelFor(Email);
         jlbl_Email.setText("Email");
+        jpnl_Main_Login.add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
-        jlbl__Forgot_Password.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl__Forgot_Password.setBackground(new java.awt.Color(0, 0, 0));
+        jlbl__Forgot_Password.setForeground(new java.awt.Color(23, 22, 22));
         jlbl__Forgot_Password.setText("Forgot Password?");
         jlbl__Forgot_Password.setToolTipText("");
+        jpnl_Main_Login.add(jlbl__Forgot_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
 
-        jlbl_Sign_Up.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Sign_Up.setBackground(new java.awt.Color(0, 0, 0));
+        jlbl_Sign_Up.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Sign_Up.setText("Sign  Up");
         jlbl_Sign_Up.setToolTipText("");
+        jpnl_Main_Login.add(jlbl_Sign_Up, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, -1, -1));
 
-        javax.swing.GroupLayout jpnl_Main_LoginLayout = new javax.swing.GroupLayout(jpnl_Main_Login);
-        jpnl_Main_Login.setLayout(jpnl_Main_LoginLayout);
-        jpnl_Main_LoginLayout.setHorizontalGroup(
-            jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
-                .addGroup(jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addGroup(jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jbtn_Login)
-                            .addComponent(jtf_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jpf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jlbl_Sign_Up)
-                            .addComponent(jlbl__Forgot_Password)
-                            .addComponent(jlbl_Login)))
-                    .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addGroup(jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jlbl_Password, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlbl_Email, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addContainerGap(140, Short.MAX_VALUE))
-        );
-        jpnl_Main_LoginLayout.setVerticalGroup(
-            jpnl_Main_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnl_Main_LoginLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jlbl_Login)
-                .addGap(20, 20, 20)
-                .addComponent(jlbl_Email)
-                .addGap(10, 10, 10)
-                .addComponent(jtf_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jlbl_Password)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jlbl__Forgot_Password)
-                .addGap(34, 34, 34)
-                .addComponent(jbtn_Login)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlbl_Sign_Up)
-                .addContainerGap(74, Short.MAX_VALUE))
-        );
+        jSeparator1.setBackground(new java.awt.Color(226, 149, 90));
+        jSeparator1.setForeground(new java.awt.Color(226, 149, 90));
+        jpnl_Main_Login.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 120, 10));
+
+        jSeparator2.setForeground(new java.awt.Color(226, 149, 90));
+        jpnl_Main_Login.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 120, -1));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(23, 22, 22));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background2.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jpnl_Main_Login.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 410));
 
         getContentPane().add(jpnl_Main_Login, "card3");
 
@@ -153,11 +164,11 @@ public class Login extends javax.swing.JFrame {
         jpnl_Main_Sign_Up.setLayout(jpnl_Main_Sign_UpLayout);
         jpnl_Main_Sign_UpLayout.setHorizontalGroup(
             jpnl_Main_Sign_UpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
         jpnl_Main_Sign_UpLayout.setVerticalGroup(
             jpnl_Main_Sign_UpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 410, Short.MAX_VALUE)
         );
 
         getContentPane().add(jpnl_Main_Sign_Up, "card2");
@@ -165,51 +176,59 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void jbtn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_LoginActionPerformed
 
     }//GEN-LAST:event_jbtn_LoginActionPerformed
 
-    private void jtf_EmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtf_EmailFocusGained
-        if ("Enter your Email".equals(jtf_Email.getText())) {
-            jtf_Email.setText("");
+    private void EmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EmailFocusGained
+        if ("Enter your Email".equals(Email.getText())) {
+            Email.setText("");
         }
-    }//GEN-LAST:event_jtf_EmailFocusGained
+    }//GEN-LAST:event_EmailFocusGained
 
-    private void jtf_EmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtf_EmailFocusLost
-        if ("".equals(jtf_Email.getText())) {
-            jtf_Email.setText("Enter your Email");
+    private void EmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EmailFocusLost
+        if ("".equals(Email.getText())) {
+            Email.setText("Enter your Email");
         }
-    }//GEN-LAST:event_jtf_EmailFocusLost
+    }//GEN-LAST:event_EmailFocusLost
 
-    private void jpf_PasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpf_PasswordFocusGained
-        if ("Password".equals(jpf_Password.getText())) {
-            jpf_Password.setEchoChar('\u2022');
-            jpf_Password.setText("");
+    private void PasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PasswordFocusGained
+        if ("Password".equals(Password.getText())) {
+            Password.setEchoChar('\u2022');
+            Password.setText("");
         }
-    }//GEN-LAST:event_jpf_PasswordFocusGained
+    }//GEN-LAST:event_PasswordFocusGained
 
-    private void jpf_PasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpf_PasswordFocusLost
-        if ("".equals(jpf_Password.getText())) {
-            jpf_Password.setEchoChar((char) 0);
-            jpf_Password.setText("Password");
+    private void PasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PasswordFocusLost
+        if ("".equals(Password.getText())) {
+            Password.setEchoChar((char) 0);
+            Password.setText("Password");
         }
-    }//GEN-LAST:event_jpf_PasswordFocusLost
+    }//GEN-LAST:event_PasswordFocusLost
 
-    private void jtf_EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_EmailActionPerformed
+    private void EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_EmailActionPerformed
+    }//GEN-LAST:event_EmailActionPerformed
 
-
+    private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordActionPerformed
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Email;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JButton jbtn_Login;
     private javax.swing.JLabel jlbl_Email;
     private javax.swing.JLabel jlbl_Login;
     private javax.swing.JLabel jlbl_Password;
     private javax.swing.JLabel jlbl_Sign_Up;
     private javax.swing.JLabel jlbl__Forgot_Password;
-    private javax.swing.JPasswordField jpf_Password;
     private javax.swing.JPanel jpnl_Main_Login;
     private javax.swing.JPanel jpnl_Main_Sign_Up;
-    private javax.swing.JTextField jtf_Email;
     // End of variables declaration//GEN-END:variables
 }
