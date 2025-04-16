@@ -31,7 +31,7 @@ public final class MainWindow extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(32767, 32767));
         setMinimumSize(new java.awt.Dimension(900, 410));
 
-        jPanel1.setBackground(new java.awt.Color(51, 0, 102));
+        jPanel1.setBackground(new java.awt.Color(35, 50, 90));
         jPanel1.setMinimumSize(new java.awt.Dimension(700, 410));
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 410));
 
@@ -46,7 +46,7 @@ public final class MainWindow extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel2.setBackground(new java.awt.Color(51, 0, 102));
+        jPanel2.setBackground(new java.awt.Color(35, 50, 90));
         jPanel2.setMinimumSize(new java.awt.Dimension(200, 410));
         jPanel2.setPreferredSize(new java.awt.Dimension(200, 410));
 
