@@ -6,21 +6,9 @@ import java.awt.Color;
 import javax.swing.SwingUtilities;
 
 public final class MainWindow extends javax.swing.JFrame {
-   private DataController db;
-   private Login login;
    
-    public void setLogIn(){
-        if(login == null) {
-            login = new Login(db);
-        }
-        jpnlMain.removeAll();
-        jpnlMain.add(login);
-        SwingUtilities.updateComponentTreeUI(jpnlMain);
-    }
     public MainWindow(DataController db) {
-        this.db = db;
-        initComponents();
-        setLogIn();        
+        initComponents(); 
     }
 
     /**
@@ -41,7 +29,7 @@ public final class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("House Management");
         setAutoRequestFocus(false);
-        setBounds(new java.awt.Rectangle(0, 0, 631, 500));
+        setBounds(new java.awt.Rectangle(0, 0, 700, 500));
         setLocation(50,50);
         setMaximumSize(new java.awt.Dimension(32767, 32767));
         setMinimumSize(new java.awt.Dimension(300, 200));
@@ -108,7 +96,7 @@ public final class MainWindow extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jpnlSide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jpnlMain, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +110,6 @@ public final class MainWindow extends javax.swing.JFrame {
 
     private void jbtnAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAccountActionPerformed
         jbtnAccount.setBackground(Color.red);
-        setLogIn();
     }//GEN-LAST:event_jbtnAccountActionPerformed
 
     /**

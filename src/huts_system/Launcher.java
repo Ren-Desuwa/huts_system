@@ -2,7 +2,7 @@ package huts_system;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import controller.DataController;
-import view.MainWindow;
+import view.Electricity;
 import java.awt.EventQueue;
 import java.sql.SQLException;
 import tests.Tests;
@@ -18,8 +18,8 @@ public class Launcher {
         EventQueue.invokeLater(() -> {
             try {
                 DataController db = new DataController("asd");
-                MainWindow main = new MainWindow(db);
-                main.setVisible(true);
+                Electricity login = new Electricity(db);
+                login.setVisible(true);
                 System.out.println("Started");
             } catch (SQLException e) {
                 System.out.println("crashed SQL");
