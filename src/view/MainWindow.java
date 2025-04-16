@@ -1,24 +1,26 @@
 
 package view;
 
+import controller.DataController;
 import java.awt.Color;
 import javax.swing.SwingUtilities;
 
 public final class MainWindow extends javax.swing.JFrame {
-
+   private DataController db;
    private Login login;
    
     public void setLogIn(){
         if(login == null) {
-            login = new Login();
+            login = new Login(db);
         }
-        jPanel2.removeAll();
-        jPanel2.add(login);
-        SwingUtilities.updateComponentTreeUI(jPanel2);
+        jpnlMain.removeAll();
+        jpnlMain.add(login);
+        SwingUtilities.updateComponentTreeUI(jpnlMain);
     }
-    public MainWindow() {
+    public MainWindow(DataController db) {
+        this.db = db;
         initComponents();
-        setLogIn();
+        setLogIn();        
     }
 
     /**
@@ -30,26 +32,28 @@ public final class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        jpnlSide = new javax.swing.JPanel();
+        jbtnAccount = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
-        jPanel2 = new javax.swing.JPanel();
+        jpnlMain = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("House Management");
         setAutoRequestFocus(false);
+        setBounds(new java.awt.Rectangle(0, 0, 631, 500));
         setLocation(50,50);
-        setMinimumSize(new java.awt.Dimension(1243, 834));
+        setMaximumSize(new java.awt.Dimension(32767, 32767));
+        setMinimumSize(new java.awt.Dimension(300, 200));
 
-        jPanel1.setBackground(new java.awt.Color(51, 0, 102));
-        jPanel1.setForeground(new java.awt.Color(51, 0, 102));
-        jPanel1.setPreferredSize(new java.awt.Dimension(201, 300));
+        jpnlSide.setBackground(new java.awt.Color(51, 0, 102));
+        jpnlSide.setForeground(new java.awt.Color(51, 0, 102));
+        jpnlSide.setPreferredSize(new java.awt.Dimension(201, 300));
 
-        jButton2.setText("Account");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jbtnAccount.setText("Account");
+        jbtnAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jbtnAccountActionPerformed(evt);
             }
         });
 
@@ -66,58 +70,60 @@ public final class MainWindow extends javax.swing.JFrame {
         jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(jTree1);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jpnlSideLayout = new javax.swing.GroupLayout(jpnlSide);
+        jpnlSide.setLayout(jpnlSideLayout);
+        jpnlSideLayout.setHorizontalGroup(
+            jpnlSideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnlSideLayout.createSequentialGroup()
+                .addGroup(jpnlSideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnlSideLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbtnAccount))
+                    .addGroup(jpnlSideLayout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        jpnlSideLayout.setVerticalGroup(
+            jpnlSideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlSideLayout.createSequentialGroup()
                 .addGap(115, 115, 115)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
+                .addComponent(jbtnAccount)
                 .addGap(15, 15, 15))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 51));
-        jPanel2.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel2.setRequestFocusEnabled(false);
-        jPanel2.setLayout(new java.awt.BorderLayout());
+        jbtnAccount.getAccessibleContext().setAccessibleDescription("");
+
+        jpnlMain.setBackground(new java.awt.Color(255, 255, 51));
+        jpnlMain.setPreferredSize(new java.awt.Dimension(0, 0));
+        jpnlMain.setRequestFocusEnabled(false);
+        jpnlMain.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jpnlSide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
+            .addComponent(jpnlSide, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(jpnlMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jButton2.setBackground(Color.red);
+    private void jbtnAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAccountActionPerformed
+        jbtnAccount.setBackground(Color.red);
         setLogIn();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jbtnAccountActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,10 +131,10 @@ public final class MainWindow extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
+    private javax.swing.JButton jbtnAccount;
+    private javax.swing.JPanel jpnlMain;
+    private javax.swing.JPanel jpnlSide;
     // End of variables declaration//GEN-END:variables
 }
