@@ -1,12 +1,17 @@
 package view;
 import controller.DataController;
+import controller.NavigationController;
 import java.time.LocalDate;
 import model.Bill;
 
 public class Electricity extends javax.swing.JPanel {
 
-
-    public Electricity(DataController db) {
+    private final NavigationController navigation;
+    private final DataController database;
+    
+    public Electricity(DataController db, NavigationController nav) {
+        this.database = db;
+        this.navigation = nav;
         initComponents();
     }
 

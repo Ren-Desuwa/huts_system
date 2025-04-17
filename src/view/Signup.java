@@ -6,14 +6,14 @@ import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import javax.swing.JPanel;
 
-public class Login extends JPanel {
+public class Signup extends JPanel {
 
     private final DataController database;
     private final NavigationController navigation;
     /**
      * Creates new form Login
      */
-    public Login(DataController db, NavigationController nav) {
+    public Signup(DataController db, NavigationController nav) {
         this.database = db;
         this.navigation = nav;
         initComponents();
@@ -150,7 +150,7 @@ public class Login extends JPanel {
             if (isAuthenticated) {
                 // Success: proceed to the next screen or show success message
                 JOptionPane.showMessageDialog(this, "Login successful!");
-                navigation.show("electricity"); // close window
+                navigation.show("dashboard"); // close window
                 // You could switch cards here, or open a dashboard, etc.
             } else {
                 // Invalid credentials
