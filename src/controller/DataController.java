@@ -57,6 +57,21 @@ public class DataController {
             return pstmt.executeQuery().next(); // Returns true if user exists
         }
     }
+    
+    public boolean registerUser(String username, String password) throws SQLException {
+        String sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            pstmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            if (e.getMessage().contains("UNIQUE")) {
+                return false;
+            }
+            throw e;
+        }
+    }
 
     // === READINGS OPERATIONS ===
     public void saveReading(Utility reading, int userId) throws SQLException {

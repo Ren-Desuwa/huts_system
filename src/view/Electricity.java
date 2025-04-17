@@ -1,5 +1,4 @@
 package view;
-
 import controller.DataController;
 import java.time.LocalDate;
 import model.Bill;
@@ -69,7 +68,7 @@ public class Electricity extends javax.swing.JPanel {
         Amount.setText("Amount ($)");
         add(Amount, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 54, -1, -1));
 
-        In_Date.setText("YYYY-MM-DD");
+        In_Date.setText("2025-05-01");
         In_Date.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         In_Date.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +77,7 @@ public class Electricity extends javax.swing.JPanel {
         });
         add(In_Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 80, 122, -1));
 
+        In_Amount.setText("1200");
         In_Amount.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         In_Amount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,7 +187,7 @@ public class Electricity extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addComponent(jLabel12)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, 190));
@@ -203,7 +203,7 @@ public class Electricity extends javax.swing.JPanel {
         add(kWhUsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 120, 138, 28));
 
         Out_totalSpent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Out_totalSpent.setText("520$");
+        Out_totalSpent.setText("php 520");
         Out_totalSpent.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Out_totalSpent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +223,7 @@ public class Electricity extends javax.swing.JPanel {
         add(UsageTrend, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 223, 112, 28));
 
         Out_aveMonthlyCost.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Out_aveMonthlyCost.setText("120$");
+        Out_aveMonthlyCost.setText("php 120");
         Out_aveMonthlyCost.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Out_aveMonthlyCost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

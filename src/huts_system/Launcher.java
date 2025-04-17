@@ -17,15 +17,17 @@ public class Launcher {
         FlatDarkLaf.setup();
         EventQueue.invokeLater(() -> {
             try {
-                DataController db = new DataController("asd");
-                Login login = new Login(db);
+                DataController database = new DataController("data/huts.db");
+                Login login = new Login(database);
                 login.setVisible(true);
                 System.out.println("Started");
             } catch (SQLException e) {
-                System.out.println("crashed SQL");
+                System.err.println("SQL Error: " + e.getMessage());
+                e.printStackTrace();
             } catch (Exception e) {
-                System.out.println("crashed");
-            } 
+                System.err.println("Unexpected Error: " + e.getMessage());
+                e.printStackTrace();
+            }
         });
         
         
