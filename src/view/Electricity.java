@@ -158,16 +158,18 @@ public class Electricity extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel9))
+                        .addGap(0, 193, Short.MAX_VALUE)
+                        .addComponent(jLabel9)
+                        .addGap(52, 52, 52))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel7)))
-                .addGap(23, 23, 23)
-                .addComponent(jLabel8))
+                        .addComponent(jLabel7)
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel8)
+                        .addGap(23, 23, 23))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel10)
@@ -266,7 +268,6 @@ public class Electricity extends javax.swing.JPanel {
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jPanel3.setBackground(new java.awt.Color(0,0,0,1));
 
