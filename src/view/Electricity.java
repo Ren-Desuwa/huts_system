@@ -53,7 +53,6 @@ public class Electricity extends javax.swing.JPanel {
         jLabel21 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(35, 50, 90));
         setMinimumSize(new java.awt.Dimension(700, 410));
         setPreferredSize(new java.awt.Dimension(700, 410));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -73,7 +72,9 @@ public class Electricity extends javax.swing.JPanel {
         Amount.setText("Amount ($)");
         add(Amount, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 54, -1, -1));
 
+        In_Date.setForeground(new java.awt.Color(23, 22, 22));
         In_Date.setText("2025-05-01");
+        In_Date.setBackground(new java.awt.Color(0,0,0,1));
         In_Date.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         In_Date.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +83,9 @@ public class Electricity extends javax.swing.JPanel {
         });
         add(In_Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 80, 122, -1));
 
+        In_Amount.setForeground(new java.awt.Color(23, 22, 22));
         In_Amount.setText("1200");
+        In_Amount.setBackground(new java.awt.Color(0,0,0,1));
         In_Amount.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         In_Amount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +99,9 @@ public class Electricity extends javax.swing.JPanel {
         TotalSpent.setText("Total Spent (This Year)");
         add(TotalSpent, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 223, 176, 28));
 
+        In_kWhUsed.setForeground(new java.awt.Color(23, 22, 22));
         In_kWhUsed.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        In_kWhUsed.setBackground(new java.awt.Color(0,0,0,1));
         In_kWhUsed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 In_kWhUsedActionPerformed(evt);
@@ -115,20 +120,34 @@ public class Electricity extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 182, 160, -1));
 
-        ScrollPane_Electric_Bill.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ScrollPane_Electric_Bill.setBackground(new java.awt.Color(0,0,0,1));
+        ScrollPane_Electric_Bill.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollPane_Electric_Bill.setBorder(null);
         ScrollPane_Electric_Bill.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         ScrollPane_Electric_Bill.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        jPanel1.setBackground(new java.awt.Color(0,0,0,1));
+
+        jLabel5.setForeground(new java.awt.Color(23, 22, 22));
         jLabel5.setText("Date");
+        jLabel5.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel6.setForeground(new java.awt.Color(23, 22, 22));
         jLabel6.setText("Amount");
+        jLabel6.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel7.setForeground(new java.awt.Color(23, 22, 22));
         jLabel7.setText("kWh Used");
+        jLabel7.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel8.setForeground(new java.awt.Color(23, 22, 22));
         jLabel8.setText("notes");
+        jLabel8.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel9.setForeground(new java.awt.Color(23, 22, 22));
         jLabel9.setText("jLabel9");
 
+        jLabel10.setForeground(new java.awt.Color(23, 22, 22));
         jLabel10.setText("jLabel10");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -174,8 +193,9 @@ public class Electricity extends javax.swing.JPanel {
 
         add(ScrollPane_Electric_Bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 258, -1, 130));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel12.setForeground(new java.awt.Color(23, 22, 22));
         jLabel12.setText("Histograph");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -192,7 +212,7 @@ public class Electricity extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addComponent(jLabel12)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, 190));
@@ -208,7 +228,9 @@ public class Electricity extends javax.swing.JPanel {
         add(kWhUsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 120, 138, 28));
 
         Out_totalSpent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Out_totalSpent.setForeground(new java.awt.Color(23, 22, 22));
         Out_totalSpent.setText("php 520");
+        Out_totalSpent.setBackground(new java.awt.Color(0,0,0,1));
         Out_totalSpent.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Out_totalSpent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,7 +250,9 @@ public class Electricity extends javax.swing.JPanel {
         add(UsageTrend, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 223, 112, 28));
 
         Out_aveMonthlyCost.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Out_aveMonthlyCost.setForeground(new java.awt.Color(23, 22, 22));
         Out_aveMonthlyCost.setText("php 120");
+        Out_aveMonthlyCost.setBackground(new java.awt.Color(0,0,0,1));
         Out_aveMonthlyCost.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Out_aveMonthlyCost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,22 +261,38 @@ public class Electricity extends javax.swing.JPanel {
         });
         add(Out_aveMonthlyCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 340, 138, -1));
 
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane1.setBackground(new java.awt.Color(0,0,0,1));
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jPanel3.setBackground(new java.awt.Color(0,0,0,1));
+
+        jLabel15.setForeground(new java.awt.Color(23, 22, 22));
         jLabel15.setText("2%");
+        jLabel15.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel17.setForeground(new java.awt.Color(23, 22, 22));
         jLabel17.setText("3%");
+        jLabel17.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel18.setForeground(new java.awt.Color(23, 22, 22));
         jLabel18.setText("6%");
+        jLabel18.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel19.setForeground(new java.awt.Color(23, 22, 22));
         jLabel19.setText("1%");
+        jLabel19.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel20.setForeground(new java.awt.Color(23, 22, 22));
         jLabel20.setText("2%");
+        jLabel20.setBackground(new java.awt.Color(0,0,0,1));
 
+        jLabel21.setForeground(new java.awt.Color(23, 22, 22));
         jLabel21.setText("4%");
+        jLabel21.setBackground(new java.awt.Color(0,0,0,1));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -284,7 +324,7 @@ public class Electricity extends javax.swing.JPanel {
                 .addComponent(jLabel20)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel3);
