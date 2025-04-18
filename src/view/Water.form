@@ -34,7 +34,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Add New Electricity Bill"/>
+        <Property name="text" type="java.lang.String" value="Add New Water Bill"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -132,7 +132,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JTextField" name="In_kWhUsed">
+    <Component class="javax.swing.JTextField" name="In_m3Used">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
@@ -144,10 +144,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="In_kWhUsedActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="In_m3UsedActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="In_kWhUsed.setBackground(new java.awt.Color(0,0,0,1));"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="In_m3Used.setBackground(new java.awt.Color(0,0,0,1));"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -228,7 +228,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Electric Bill History"/>
+        <Property name="text" type="java.lang.String" value="Water Bill History"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -244,7 +244,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="kWh Used (optional)"/>
+        <Property name="text" type="java.lang.String" value="M&#xb3; Used (optional)"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -332,7 +332,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="ScrollPane_Electric_Bill">
+    <Container class="javax.swing.JScrollPane" name="ScrollPane_Water_Bill">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -344,7 +344,7 @@
         <Property name="verticalScrollBarPolicy" type="int" value="22"/>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ScrollPane_Electric_Bill.setBackground(new java.awt.Color(0,0,0,1));"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ScrollPane_Water_Bill.setBackground(new java.awt.Color(0,0,0,1));"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

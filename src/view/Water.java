@@ -4,12 +4,12 @@ import controller.NavigationController;
 import java.time.LocalDate;
 import model.Bill;
 
-public class Electricity extends javax.swing.JPanel {
+public class Water extends javax.swing.JPanel {
 
     private final NavigationController navigation;
     private final DataController database;
     
-    public Electricity(DataController db, NavigationController nav) {
+    public Water(DataController db, NavigationController nav) {
         this.database = db;
         this.navigation = nav;
         initComponents();
@@ -25,7 +25,7 @@ public class Electricity extends javax.swing.JPanel {
         In_Date = new javax.swing.JTextField();
         In_Amount = new javax.swing.JTextField();
         TotalSpent = new javax.swing.JLabel();
-        In_kWhUsed = new javax.swing.JTextField();
+        In_m3Used = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -35,7 +35,7 @@ public class Electricity extends javax.swing.JPanel {
         AveMonthlyCost = new javax.swing.JLabel();
         UsageTrend = new javax.swing.JLabel();
         Out_aveMonthlyCost = new javax.swing.JTextField();
-        ScrollPane_Electric_Bill = new javax.swing.JScrollPane();
+        ScrollPane_Water_Bill = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -61,7 +61,7 @@ public class Electricity extends javax.swing.JPanel {
 
         Title.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Title.setForeground(new java.awt.Color(23, 22, 22));
-        Title.setText("Add New Electricity Bill");
+        Title.setText("Add New Water Bill");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 36));
 
         Date.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -101,15 +101,15 @@ public class Electricity extends javax.swing.JPanel {
         TotalSpent.setText("Total Spent (This Year)");
         add(TotalSpent, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 223, 176, 28));
 
-        In_kWhUsed.setForeground(new java.awt.Color(23, 22, 22));
-        In_kWhUsed.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        In_kWhUsed.setBackground(new java.awt.Color(0,0,0,1));
-        In_kWhUsed.addActionListener(new java.awt.event.ActionListener() {
+        In_m3Used.setForeground(new java.awt.Color(23, 22, 22));
+        In_m3Used.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        In_m3Used.setBackground(new java.awt.Color(0,0,0,1));
+        In_m3Used.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                In_kWhUsedActionPerformed(evt);
+                In_m3UsedActionPerformed(evt);
             }
         });
-        add(In_kWhUsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 154, 261, -1));
+        add(In_m3Used, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 154, 261, -1));
 
         jButton1.setBackground(new java.awt.Color(35, 50, 90));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,12 +148,12 @@ public class Electricity extends javax.swing.JPanel {
 
         BillHistory.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         BillHistory.setForeground(new java.awt.Color(23, 22, 22));
-        BillHistory.setText("Electric Bill History");
+        BillHistory.setText("Water Bill History");
         add(BillHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 170, 28));
 
         kWhUsed.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         kWhUsed.setForeground(new java.awt.Color(23, 22, 22));
-        kWhUsed.setText("kWh Used (optional)");
+        kWhUsed.setText("M³ Used (optional)");
         add(kWhUsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 120, 138, 28));
 
         Out_totalSpent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -190,11 +190,11 @@ public class Electricity extends javax.swing.JPanel {
         });
         add(Out_aveMonthlyCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 340, 138, -1));
 
-        ScrollPane_Electric_Bill.setBackground(new java.awt.Color(0,0,0,1));
-        ScrollPane_Electric_Bill.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollPane_Electric_Bill.setBorder(null);
-        ScrollPane_Electric_Bill.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        ScrollPane_Electric_Bill.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        ScrollPane_Water_Bill.setBackground(new java.awt.Color(0,0,0,1));
+        ScrollPane_Water_Bill.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollPane_Water_Bill.setBorder(null);
+        ScrollPane_Water_Bill.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ScrollPane_Water_Bill.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
         jPanel4.setBackground(new java.awt.Color(0,0,0,1));
 
@@ -241,9 +241,9 @@ public class Electricity extends javax.swing.JPanel {
                 .addContainerGap(509, Short.MAX_VALUE))
         );
 
-        ScrollPane_Electric_Bill.setViewportView(jPanel4);
+        ScrollPane_Water_Bill.setViewportView(jPanel4);
 
-        add(ScrollPane_Electric_Bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 258, -1, 130));
+        add(ScrollPane_Water_Bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 258, -1, 130));
 
         ScrollPane_Usage_Trend.setBackground(new java.awt.Color(0,0,0,1));
         ScrollPane_Usage_Trend.setBackground(new java.awt.Color(255, 255, 255));
@@ -367,9 +367,9 @@ public class Electricity extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_In_DateActionPerformed
 
-    private void In_kWhUsedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_In_kWhUsedActionPerformed
+    private void In_m3UsedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_In_m3UsedActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_In_kWhUsedActionPerformed
+    }//GEN-LAST:event_In_m3UsedActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -396,11 +396,11 @@ public class Electricity extends javax.swing.JPanel {
     private javax.swing.JLabel Date;
     private javax.swing.JTextField In_Amount;
     private javax.swing.JTextField In_Date;
-    private javax.swing.JTextField In_kWhUsed;
+    private javax.swing.JTextField In_m3Used;
     private javax.swing.JTextField Out_aveMonthlyCost;
     private javax.swing.JTextField Out_totalSpent;
-    private javax.swing.JScrollPane ScrollPane_Electric_Bill;
     private javax.swing.JScrollPane ScrollPane_Usage_Trend;
+    private javax.swing.JScrollPane ScrollPane_Water_Bill;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel TotalSpent;
     private javax.swing.JLabel UsageTrend;

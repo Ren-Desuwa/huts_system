@@ -63,7 +63,7 @@ public class Login extends JPanel {
                 jbtn_LoginActionPerformed(evt);
             }
         });
-        add(jbtn_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, -1));
+        add(jbtn_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, -1, -1));
 
         jtf_Username.setBackground(new java.awt.Color(0,0,0,1));
         jtf_Username.setForeground(new java.awt.Color(23, 22, 22));
@@ -137,7 +137,7 @@ public class Login extends JPanel {
                 jlbl_Sign_UpMouseExited(evt);
             }
         });
-        add(jlbl_Sign_Up, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, -1, -1));
+        add(jlbl_Sign_Up, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, -1, -1));
 
         jlbl_Account_Icon.setBackground(new java.awt.Color(23, 22, 22));
         jlbl_Account_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/AccountBlack.png"))); // NOI18N
