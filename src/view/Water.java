@@ -207,7 +207,7 @@ public class Water extends javax.swing.JPanel {
         jLabel13.setBackground(new java.awt.Color(0,0,0,1));
 
         jLabel14.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel14.setText("kWh Used");
+        jLabel14.setText("M³ Used");
         jLabel14.setBackground(new java.awt.Color(0,0,0,1));
 
         jLabel16.setForeground(new java.awt.Color(23, 22, 22));
