@@ -36,11 +36,11 @@ public class Water extends javax.swing.JPanel {
         UsageTrend = new javax.swing.JLabel();
         Out_aveMonthlyCost = new javax.swing.JTextField();
         ScrollPane_Water_Bill = new javax.swing.JScrollPane();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         ScrollPane_Usage_Trend = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
@@ -196,52 +196,52 @@ public class Water extends javax.swing.JPanel {
         ScrollPane_Water_Bill.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         ScrollPane_Water_Bill.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        jPanel4.setBackground(new java.awt.Color(0,0,0,1));
+        jPanel5.setBackground(new java.awt.Color(0,0,0,1));
 
-        jLabel11.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel11.setText("Date");
-        jLabel11.setBackground(new java.awt.Color(0,0,0,1));
+        jLabel15.setForeground(new java.awt.Color(23, 22, 22));
+        jLabel15.setText("Date");
+        jLabel15.setBackground(new java.awt.Color(0,0,0,1));
 
-        jLabel13.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel13.setText("Amount");
-        jLabel13.setBackground(new java.awt.Color(0,0,0,1));
+        jLabel17.setForeground(new java.awt.Color(23, 22, 22));
+        jLabel17.setText("Amount");
+        jLabel17.setBackground(new java.awt.Color(0,0,0,1));
 
-        jLabel14.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel14.setText("M³ Used");
-        jLabel14.setBackground(new java.awt.Color(0,0,0,1));
+        jLabel18.setForeground(new java.awt.Color(23, 22, 22));
+        jLabel18.setText("M³  Used");
+        jLabel18.setBackground(new java.awt.Color(0,0,0,1));
 
-        jLabel16.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel16.setText("notes");
-        jLabel16.setBackground(new java.awt.Color(0,0,0,1));
+        jLabel19.setForeground(new java.awt.Color(23, 22, 22));
+        jLabel19.setText("notes");
+        jLabel19.setBackground(new java.awt.Color(0,0,0,1));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11)
+                .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addComponent(jLabel13)
+                .addComponent(jLabel17)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel14)
+                .addComponent(jLabel18)
                 .addGap(28, 28, 28)
-                .addComponent(jLabel16)
+                .addComponent(jLabel19)
                 .addGap(23, 23, 23))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel16))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
                 .addContainerGap(509, Short.MAX_VALUE))
         );
 
-        ScrollPane_Water_Bill.setViewportView(jPanel4);
+        ScrollPane_Water_Bill.setViewportView(jPanel5);
 
         add(ScrollPane_Water_Bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 258, -1, 130));
 
@@ -356,7 +356,7 @@ public class Water extends javax.swing.JPanel {
 
         ScrollPane_Usage_Trend.setViewportView(jPanel3);
 
-        add(ScrollPane_Usage_Trend, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 150, 110));
+        add(ScrollPane_Usage_Trend, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 150, 130));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background2.png"))); // NOI18N
         Background.setText("jLabel22");
@@ -405,11 +405,11 @@ public class Water extends javax.swing.JPanel {
     private javax.swing.JLabel TotalSpent;
     private javax.swing.JLabel UsageTrend;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -422,7 +422,7 @@ public class Water extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel kWhUsed;
     // End of variables declaration//GEN-END:variables
 }

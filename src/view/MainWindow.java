@@ -26,6 +26,8 @@ public final class MainWindow extends javax.swing.JFrame {
         nav.register("signup", new Signup(db, nav));
         nav.register("dashboard", new DashBoard(db, nav));
         nav.register("electricity", new Electricity(db, nav));
+        nav.register("water", new Water(db, nav));
+        
         // …etc for water, gas, signup, etc.
 
         // Show the initial card:

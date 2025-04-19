@@ -158,7 +158,7 @@ public class Login extends JPanel {
             if (isAuthenticated) {
                 // Success: proceed to the next screen or show success message
                 JOptionPane.showMessageDialog(this, "Login successful!");
-                navigation.show("electricity"); // close window
+                navigation.show("water"); // close window
                 // You could switch cards here, or open a dashboard, etc.
             } else {
                 // Invalid credentials

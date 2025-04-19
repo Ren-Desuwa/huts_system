@@ -356,7 +356,7 @@ public class Electricity extends javax.swing.JPanel {
 
         ScrollPane_Usage_Trend.setViewportView(jPanel3);
 
-        add(ScrollPane_Usage_Trend, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 150, 110));
+        add(ScrollPane_Usage_Trend, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 150, 130));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background2.png"))); // NOI18N
         Background.setText("jLabel22");
