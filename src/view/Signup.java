@@ -38,6 +38,7 @@ public class Signup extends JPanel {
         jlbl_Email = new javax.swing.JLabel();
         jlbl_Background = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(35, 50, 90));
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
@@ -51,7 +52,7 @@ public class Signup extends JPanel {
         jlbl_SignIn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlbl_SignIn.setText("Sign In");
         jlbl_SignIn.setToolTipText("");
-        add(jlbl_SignIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, -1, -1));
+        add(jlbl_SignIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
 
         jbtn_Signup.setBackground(new java.awt.Color(226, 149, 90));
         jbtn_Signup.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -63,7 +64,7 @@ public class Signup extends JPanel {
                 jbtn_SignupActionPerformed(evt);
             }
         });
-        add(jbtn_Signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, -1));
+        add(jbtn_Signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
 
         jtf_Username.setBackground(new java.awt.Color(0,0,0,1));
         jtf_Username.setForeground(new java.awt.Color(23, 22, 22));
@@ -81,7 +82,7 @@ public class Signup extends JPanel {
                 jtf_UsernameActionPerformed(evt);
             }
         });
-        add(jtf_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 120, -1));
+        add(jtf_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 120, -1));
 
         jpf_Confirm_Password.setForeground(new java.awt.Color(23, 22, 22));
         jpf_Confirm_Password.setText("Confirm Password");
@@ -100,15 +101,15 @@ public class Signup extends JPanel {
                 jpf_Confirm_PasswordActionPerformed(evt);
             }
         });
-        add(jpf_Confirm_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 120, -1));
+        add(jpf_Confirm_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 120, -1));
 
         jlbl_Password.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Password.setText("Password");
-        add(jlbl_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
+        add(jlbl_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
 
         jlbl_Username.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Username.setText("Username");
-        add(jlbl_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, -1));
+        add(jlbl_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, -1, -1));
 
         jlbl_Login.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Login.setText("Log In");
@@ -125,11 +126,11 @@ public class Signup extends JPanel {
                 jlbl_LoginMouseExited(evt);
             }
         });
-        add(jlbl_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, -1, -1));
+        add(jlbl_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, -1, -1));
 
         jlbl_Account_Icon.setBackground(new java.awt.Color(23, 22, 22));
         jlbl_Account_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/AccountBlack.png"))); // NOI18N
-        add(jlbl_Account_Icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, -1, -1));
+        add(jlbl_Account_Icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, -1, -1));
 
         jpf_Password.setForeground(new java.awt.Color(23, 22, 22));
         jpf_Password.setText("Enter Password");
@@ -148,11 +149,11 @@ public class Signup extends JPanel {
                 jpf_PasswordActionPerformed(evt);
             }
         });
-        add(jpf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 120, -1));
+        add(jpf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 120, -1));
 
         jlbl_Confirm_Password.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Confirm_Password.setText("Confirm Password");
-        add(jlbl_Confirm_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, -1, -1));
+        add(jlbl_Confirm_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, -1, -1));
 
         jtf_Email.setForeground(new java.awt.Color(23, 22, 22));
         jtf_Email.setText("Enter Email");
@@ -165,15 +166,14 @@ public class Signup extends JPanel {
                 jtf_EmailFocusLost(evt);
             }
         });
-        add(jtf_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 120, -1));
+        add(jtf_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 120, -1));
 
         jlbl_Email.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Email.setText("Email");
-        add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, -1, -1));
+        add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, -1, -1));
 
-        jlbl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background2.png"))); // NOI18N
-        jlbl_Background.setText("jLabel2");
-        add(jlbl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 410));
+        jlbl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background(900x410).png"))); // NOI18N
+        add(jlbl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 410));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_SignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_SignupActionPerformed

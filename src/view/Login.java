@@ -5,17 +5,20 @@ import controller.NavigationController;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import javax.swing.JPanel;
+import java.awt.CardLayout;
 
 public class Login extends JPanel {
 
     private final DataController database;
     private final NavigationController navigation;
+    private final MainWindow mainWindow;
     /**
      * Creates new form Login
      */
-    public Login(DataController db, NavigationController nav) {
+    public Login(DataController db, NavigationController nav, MainWindow mainWindow) {
         this.database = db;
         this.navigation = nav;
+        this.mainWindow = mainWindow;
         initComponents();
         
     }
@@ -35,6 +38,8 @@ public class Login extends JPanel {
         jlbl_Account_Icon = new javax.swing.JLabel();
         jlbl_Background = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(35, 50, 90));
+        setMinimumSize(new java.awt.Dimension(900, 410));
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
@@ -48,7 +53,7 @@ public class Login extends JPanel {
         jlbl_Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlbl_Login.setText("Log In");
         jlbl_Login.setToolTipText("");
-        add(jlbl_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 60, -1, -1));
+        add(jlbl_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, -1, -1));
 
         jbtn_Login.setBackground(new java.awt.Color(226, 149, 90));
         jbtn_Login.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -63,7 +68,7 @@ public class Login extends JPanel {
                 jbtn_LoginActionPerformed(evt);
             }
         });
-        add(jbtn_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, -1, -1));
+        add(jbtn_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
 
         jtf_Username.setBackground(new java.awt.Color(0,0,0,1));
         jtf_Username.setForeground(new java.awt.Color(23, 22, 22));
@@ -81,7 +86,7 @@ public class Login extends JPanel {
                 jtf_UsernameActionPerformed(evt);
             }
         });
-        add(jtf_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 150, 120, -1));
+        add(jtf_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 120, -1));
 
         jpf_Password.setForeground(new java.awt.Color(23, 22, 22));
         jpf_Password.setText("Enter Password");
@@ -95,15 +100,15 @@ public class Login extends JPanel {
                 jpf_PasswordFocusLost(evt);
             }
         });
-        add(jpf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 216, 120, -1));
+        add(jpf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 120, -1));
 
         jlbl_Password.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Password.setText("Password");
-        add(jlbl_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 194, -1, -1));
+        add(jlbl_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, -1, -1));
 
         jlbl_Username.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Username.setText("Username");
-        add(jlbl_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 128, -1, -1));
+        add(jlbl_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
 
         jlbl__Forgot_Password.setForeground(new java.awt.Color(23, 22, 22));
         jlbl__Forgot_Password.setText("Forgot Password?");
@@ -120,7 +125,7 @@ public class Login extends JPanel {
                 jlbl__Forgot_Password_Mouse_Exited(evt);
             }
         });
-        add(jlbl__Forgot_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 256, -1, -1));
+        add(jlbl__Forgot_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, -1));
 
         jlbl_Sign_Up.setForeground(new java.awt.Color(23, 22, 22));
         jlbl_Sign_Up.setText("Sign Up");
@@ -137,15 +142,14 @@ public class Login extends JPanel {
                 jlbl_Sign_UpMouseExited(evt);
             }
         });
-        add(jlbl_Sign_Up, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, -1, -1));
+        add(jlbl_Sign_Up, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, -1, -1));
 
         jlbl_Account_Icon.setBackground(new java.awt.Color(23, 22, 22));
         jlbl_Account_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/AccountBlack.png"))); // NOI18N
-        add(jlbl_Account_Icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 60, -1, -1));
+        add(jlbl_Account_Icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, -1, -1));
 
-        jlbl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background2.png"))); // NOI18N
-        jlbl_Background.setText("jLabel2");
-        add(jlbl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 410));
+        jlbl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background(900x410).png"))); // NOI18N
+        add(jlbl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 410));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_LoginActionPerformed
@@ -156,8 +160,11 @@ public class Login extends JPanel {
             boolean isAuthenticated = database.authenticateUser(email, password);
 
             if (isAuthenticated) {
+                
                 // Success: proceed to the next screen or show success message
                 JOptionPane.showMessageDialog(this, "Login successful!");
+                CardLayout mainLayout = (CardLayout) mainWindow.getContentPane().getLayout();
+                mainLayout.show(mainWindow.getContentPane(), "card3");
                 navigation.show("water"); // close window
                 // You could switch cards here, or open a dashboard, etc.
             } else {

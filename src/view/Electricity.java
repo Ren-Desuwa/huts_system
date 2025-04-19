@@ -55,7 +55,8 @@ public class Electricity extends javax.swing.JPanel {
         jLabel43 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
-        setMinimumSize(new java.awt.Dimension(700, 410));
+        setBackground(new java.awt.Color(35, 50, 90));
+        setMinimumSize(new java.awt.Dimension(900, 410));
         setPreferredSize(new java.awt.Dimension(700, 410));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -141,7 +142,7 @@ public class Electricity extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addComponent(jLabel12)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 330, 190));
@@ -358,7 +359,7 @@ public class Electricity extends javax.swing.JPanel {
 
         add(ScrollPane_Usage_Trend, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 150, 130));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background2.png"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background(700x410).png"))); // NOI18N
         Background.setText("jLabel22");
         add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 410));
     }// </editor-fold>//GEN-END:initComponents

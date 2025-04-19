@@ -55,6 +55,7 @@ public class Water extends javax.swing.JPanel {
         jLabel43 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(35, 50, 90));
         setMinimumSize(new java.awt.Dimension(700, 410));
         setPreferredSize(new java.awt.Dimension(700, 410));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -358,7 +359,7 @@ public class Water extends javax.swing.JPanel {
 
         add(ScrollPane_Usage_Trend, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 150, 130));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background2.png"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background(700x410).png"))); // NOI18N
         Background.setText("jLabel22");
         add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 410));
     }// </editor-fold>//GEN-END:initComponents
