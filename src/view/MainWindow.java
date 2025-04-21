@@ -4,6 +4,7 @@ import controller.DataController;
 
 import java.sql.SQLException;
 
+<<<<<<< Updated upstream
 import javax.swing.*;
 
 public class MainWindow extends JFrame {
@@ -25,5 +26,20 @@ public class MainWindow extends JFrame {
 		tabs.add("Dashboard", dashboardPanel);
 		add(tabs);
         setVisible(true);
+=======
+        // Register each screen (panels you build) under a key:
+        nav.register("login", new Login(db, nav, this));
+        nav.register("signup", new Signup(db, nav));
+        nav.register("dashboard", new DashBoard(db, nav));
+        nav.register("electricity", new Electricity(db, nav));
+        nav.register("water", new Water(db, nav));
+        // …etc for water, gas, signup, etc.
+        
+         // Show the initial card (First panel with login)
+        CardLayout mainLayout = (CardLayout) getContentPane().getLayout();
+        mainLayout.show(getContentPane(), "card1"); // Show the First panel
+        // Show the initial card:
+        nav.show("login");
+>>>>>>> Stashed changes
     }
 }
