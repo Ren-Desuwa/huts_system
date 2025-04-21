@@ -6,6 +6,7 @@ import view.MainWindow;
 import java.awt.EventQueue;
 import java.sql.SQLException;
 import tests.Tests;
+import view.Test;
 
 public class Launcher {
 
@@ -16,6 +17,8 @@ public class Launcher {
         
         FlatDarkLaf.setup();
         EventQueue.invokeLater(() -> {
+//            Test test = new Test();
+//            test.setVisible(true);
             try {
                 DataController database = new DataController("data/huts.db");
                 MainWindow main = new MainWindow(database);
