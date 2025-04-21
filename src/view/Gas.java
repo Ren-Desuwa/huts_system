@@ -4,12 +4,12 @@ import controller.NavigationController;
 import java.time.LocalDate;
 import model.Bill;
 
-public class Subscription extends javax.swing.JPanel {
+public class Gas extends javax.swing.JPanel {
 
     private final NavigationController navigation;
     private final DataController database;
     
-    public Subscription(DataController db, NavigationController nav) {
+    public Gas(DataController db, NavigationController nav) {
         this.database = db;
         this.navigation = nav;
         initComponents();
@@ -54,12 +54,12 @@ public class Subscription extends javax.swing.JPanel {
 
         Title.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Title.setForeground(new java.awt.Color(23, 22, 22));
-        Title.setText("Add New Subscription");
+        Title.setText("Add New Gas");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 36));
 
         Date.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Date.setForeground(new java.awt.Color(23, 22, 22));
-        Date.setText("Service Name");
+        Date.setText("Month");
         add(Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 54, -1, -1));
 
         Amount.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -68,7 +68,7 @@ public class Subscription extends javax.swing.JPanel {
         add(Amount, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 54, -1, -1));
 
         In_Date.setForeground(new java.awt.Color(23, 22, 22));
-        In_Date.setText("2025-05-01");
+        In_Date.setText("April 2025");
         In_Date.setBackground(new java.awt.Color(0,0,0,1));
         In_Date.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         In_Date.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +111,7 @@ public class Subscription extends javax.swing.JPanel {
 
         jButton1.setBackground(new java.awt.Color(35, 50, 90));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("+ Add Subscription");
+        jButton1.setText("+ Add Gas");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,12 +151,12 @@ public class Subscription extends javax.swing.JPanel {
 
         kWhUsed1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         kWhUsed1.setForeground(new java.awt.Color(23, 22, 22));
-        kWhUsed1.setText("Category");
+        kWhUsed1.setText("Status");
         add(kWhUsed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 120, 28));
 
         kWhUsed.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         kWhUsed.setForeground(new java.awt.Color(23, 22, 22));
-        kWhUsed.setText("Billing Date");
+        kWhUsed.setText("Usage");
         add(kWhUsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 120, 120, 28));
 
         ScrollPane_Water_Bill.setBackground(new java.awt.Color(0,0,0,1));
@@ -168,7 +168,7 @@ public class Subscription extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(0,0,0,1));
 
         jLabel15.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel15.setText("Service");
+        jLabel15.setText("Month");
         jLabel15.setBackground(new java.awt.Color(0,0,0,1));
 
         jLabel17.setForeground(new java.awt.Color(23, 22, 22));
@@ -176,11 +176,11 @@ public class Subscription extends javax.swing.JPanel {
         jLabel17.setBackground(new java.awt.Color(0,0,0,1));
 
         jLabel18.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel18.setText("Billing Date");
+        jLabel18.setText("Usage");
         jLabel18.setBackground(new java.awt.Color(0,0,0,1));
 
         jLabel19.setForeground(new java.awt.Color(23, 22, 22));
-        jLabel19.setText("Category");
+        jLabel19.setText("Status");
         jLabel19.setBackground(new java.awt.Color(0,0,0,1));
 
         jbtn_Edit.setBackground(new java.awt.Color(226, 149, 90));
@@ -244,13 +244,13 @@ public class Subscription extends javax.swing.JPanel {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel15)
-                        .addGap(100, 100, 100)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                         .addComponent(jLabel17)
-                        .addGap(70, 70, 70)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                         .addComponent(jLabel18)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addComponent(jLabel19)
-                        .addContainerGap(193, Short.MAX_VALUE))
+                        .addContainerGap(217, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jSeparator1)

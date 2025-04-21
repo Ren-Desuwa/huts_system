@@ -37,7 +37,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Add New Subscription"/>
+        <Property name="text" type="java.lang.String" value="Add New Gas"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -53,7 +53,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Service Name"/>
+        <Property name="text" type="java.lang.String" value="Month"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -82,7 +82,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="2025-05-01" postCode="In_Date.setBackground(new java.awt.Color(0,0,0,1));"/>
+        <Property name="text" type="java.lang.String" value="April 2025" postCode="In_Date.setBackground(new java.awt.Color(0,0,0,1));"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -173,7 +173,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="+ Add Subscription"/>
+        <Property name="text" type="java.lang.String" value="+ Add Gas"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -254,7 +254,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Category"/>
+        <Property name="text" type="java.lang.String" value="Status"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -270,7 +270,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="16" green="16" red="17" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Billing Date"/>
+        <Property name="text" type="java.lang.String" value="Usage"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -313,13 +313,13 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace pref="110" max="32767" attributes="0"/>
                               <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace pref="86" max="32767" attributes="0"/>
                               <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="103" max="32767" attributes="0"/>
                               <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="193" max="32767" attributes="0"/>
+                              <EmptySpace pref="217" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -386,7 +386,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="16" green="16" red="17" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Service"/>
+                <Property name="text" type="java.lang.String" value="Month"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jLabel15.setBackground(new java.awt.Color(0,0,0,1));"/>
@@ -408,7 +408,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="16" green="16" red="17" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Billing Date"/>
+                <Property name="text" type="java.lang.String" value="Usage"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jLabel18.setBackground(new java.awt.Color(0,0,0,1));"/>
@@ -419,7 +419,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="16" green="16" red="17" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Category"/>
+                <Property name="text" type="java.lang.String" value="Status"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jLabel19.setBackground(new java.awt.Color(0,0,0,1));"/>

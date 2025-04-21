@@ -53,7 +53,6 @@ public final class MainWindow extends javax.swing.JFrame {
         setAutoRequestFocus(false);
         setBounds(new java.awt.Rectangle(0, 0, 700, 500));
         setLocation(50,50);
-        setMaximumSize(new java.awt.Dimension(32767, 32767));
         setMinimumSize(new java.awt.Dimension(900, 410));
         getContentPane().setLayout(new java.awt.CardLayout());
 
@@ -65,7 +64,7 @@ public final class MainWindow extends javax.swing.JFrame {
         First.setLayout(FirstLayout);
         FirstLayout.setHorizontalGroup(
             FirstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1106, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         FirstLayout.setVerticalGroup(
             FirstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +112,7 @@ public final class MainWindow extends javax.swing.JFrame {
             .addGroup(SecondLayout.createSequentialGroup()
                 .addComponent(NavigationBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Contents, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE))
+                .addComponent(Contents, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SecondLayout.setVerticalGroup(
             SecondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
