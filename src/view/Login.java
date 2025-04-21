@@ -165,7 +165,10 @@ public class Login extends JPanel {
                 JOptionPane.showMessageDialog(this, "Login successful!");
                 CardLayout mainLayout = (CardLayout) mainWindow.getContentPane().getLayout();
                 mainLayout.show(mainWindow.getContentPane(), "card3");
-                navigation.show("water"); // close window
+                
+                System.out.println("Showing water panel...");
+                navigation.show("water");
+                System.out.println("Water panel should be visible now");
                 // You could switch cards here, or open a dashboard, etc.
             } else {
                 // Invalid credentials

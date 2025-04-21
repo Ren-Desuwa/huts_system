@@ -14,45 +14,29 @@ public final class MainWindow extends javax.swing.JFrame {
    
     public MainWindow(DataController db) {
         initComponents(); 
-        
-         // Get the content pane with card layout
-    JPanel contentPane = (JPanel) getContentPane();
-    CardLayout cardLayout = (CardLayout) contentPane.getLayout();
     
-    // Create your panels
-    Login loginPanel = new Login(db, null, this);  // No nav controller yet
+    System.out.println("Contents panel: " + Contents);
+    contentPanel = Contents;  // Make sure this is the correct panel
+    contentLayout = new CardLayout();
+    contentPanel.setLayout(contentLayout);
     
-    // Add panels directly to content pane
-    contentPane.add(loginPanel, "login");
-    
-    // Show login panel
-    cardLayout.show(contentPane, "login");
-    
-    // Debug
-    System.out.println("Panel count: " + contentPane.getComponentCount());
-    System.out.println("Current panel: " + contentPane.getComponent(0).getClass().getName());
-        
-        contentPanel = Contents;  // Use the Contents panel inside Second
-        contentLayout = new CardLayout();
-        contentPanel.setLayout(contentLayout);
-        
-        NavigationController nav;
-        nav = new NavigationController(contentPanel);
+    NavigationController nav;
+    nav = new NavigationController(contentPanel);
+    System.out.println("NavigationController created with panel: " + contentPanel);
 
-        // Register each screen (panels you build) under a key:
-        nav.register("login", new Login(db, nav, this));
-        nav.register("signup", new Signup(db, nav));
-        nav.register("dashboard", new DashBoard(db, nav));
-        nav.register("electricity", new Electricity(db, nav));
-        nav.register("water", new Water(db, nav));
-        // …etc for water, gas, signup, etc.
-        
-         // Show the initial card (First panel with login)
-        CardLayout mainLayout = (CardLayout) getContentPane().getLayout();
-        mainLayout.show(getContentPane(), "card1"); // Show the First panel
-        // Show the initial card:
-        nav.show("login");
-        System.out.println("Login panel should be visible now");
+    // Register each screen
+    nav.register("login", new Login(db, nav, this));
+    nav.register("signup", new Signup(db, nav));
+    nav.register("dashboard", new DashBoard(db, nav));
+    nav.register("electricity", new Electricity(db, nav));
+    nav.register("water", new Water(db, nav));
+    System.out.println("All panels registered");
+    
+    // Show the initial card:
+    CardLayout mainLayout = (CardLayout) getContentPane().getLayout();
+    mainLayout.show(getContentPane(), "card2");
+    
+    nav.show("login");
     }
 
     @SuppressWarnings("unchecked")
@@ -81,7 +65,7 @@ public final class MainWindow extends javax.swing.JFrame {
         First.setLayout(FirstLayout);
         FirstLayout.setHorizontalGroup(
             FirstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         FirstLayout.setVerticalGroup(
             FirstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,9 +112,8 @@ public final class MainWindow extends javax.swing.JFrame {
             SecondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SecondLayout.createSequentialGroup()
                 .addComponent(NavigationBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(Contents, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Contents, javax.swing.GroupLayout.PREFERRED_SIZE, 700, Short.MAX_VALUE))
         );
         SecondLayout.setVerticalGroup(
             SecondLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
