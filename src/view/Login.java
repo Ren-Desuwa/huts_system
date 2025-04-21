@@ -156,20 +156,21 @@ public class Login extends JPanel {
         String email = jtf_Username.getText().trim();
         String password = new String(jpf_Password.getPassword()).trim();
 
-        try {
+            try {
             boolean isAuthenticated = database.authenticateUser(email, password);
 
             if (isAuthenticated) {
-                
                 // Success: proceed to the next screen or show success message
                 JOptionPane.showMessageDialog(this, "Login successful!");
+
+                // First switch to the Second panel (which contains Navigation Bar and Contents)
                 CardLayout mainLayout = (CardLayout) mainWindow.getContentPane().getLayout();
                 mainLayout.show(mainWindow.getContentPane(), "card3");
-                
+
+                // Then show the dashboard or water panel in the Contents area
                 System.out.println("Showing water panel...");
                 navigation.show("water");
                 System.out.println("Water panel should be visible now");
-                // You could switch cards here, or open a dashboard, etc.
             } else {
                 // Invalid credentials
                 JOptionPane.showMessageDialog(this, "Invalid email or password.", "Login Failed", JOptionPane.ERROR_MESSAGE);
@@ -178,6 +179,7 @@ public class Login extends JPanel {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "An error occurred while trying to log in.", "Error", JOptionPane.ERROR_MESSAGE);
         }
+
     }//GEN-LAST:event_jbtn_LoginActionPerformed
 
     private void jtf_UsernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtf_UsernameFocusGained
