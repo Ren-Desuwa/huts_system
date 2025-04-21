@@ -13,7 +13,7 @@ public final class MainWindow extends javax.swing.JFrame {
     private final CardLayout contentLayout;
    
     public MainWindow(DataController db) {
-    initComponents(); 
+        initComponents(); 
     
     System.out.println("Contents panel: " + Contents);
     contentPanel = Contents;  // Make sure this is the correct panel
@@ -23,7 +23,7 @@ public final class MainWindow extends javax.swing.JFrame {
     NavigationController nav;
     nav = new NavigationController(contentPanel);
     System.out.println("NavigationController created with panel: " + contentPanel);
-    
+
     // Register each screen
     nav.register("login", new Login(db, nav, this));
     nav.register("signup", new Signup(db, nav));
@@ -32,11 +32,12 @@ public final class MainWindow extends javax.swing.JFrame {
     nav.register("water", new Water(db, nav));
     System.out.println("All panels registered");
     
-    // We start with First (card2) showing only the login form
-    // and don't show Second (card3) until after login
+    // Show the initial card:
+    CardLayout mainLayout = (CardLayout) getContentPane().getLayout();
+    mainLayout.show(getContentPane(), "card2");
     
     nav.show("login");
-}
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
