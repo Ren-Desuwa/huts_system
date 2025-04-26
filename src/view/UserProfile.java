@@ -109,7 +109,7 @@ public class UserProfile extends javax.swing.JPanel {
         add(Pane_Username);
         Pane_Username.setBounds(300, 110, 100, 20);
         add(jScrollPane1);
-        jScrollPane1.setBounds(310, 110, 2, 2);
+        jScrollPane1.setBounds(310, 110, 6, 6);
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/image/background(700x410).png"))); // NOI18N
         Background.setText("jLabel22");
